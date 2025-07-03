@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from typing import Optional
-from transformers import PreTrainedModel
+from transformers import PreTrainedModel, CausalLMOutputWithPast
 from ModelConfig import ModelConfig
 from DecoderLayer import DecoderLayer
 from RMSNorm import RMSNorm
