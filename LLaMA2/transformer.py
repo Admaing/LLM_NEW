@@ -6,7 +6,8 @@ from ModelConfig import ModelConfig
 from DecoderLayer import DecoderLayer
 from RMSNorm import RMSNorm
 from common import precompute_freqs_cis
-
+import math
+import torch.nn.functional as F
 class Transformer(PreTrainedModel):
     config_class = ModelConfig  # 配置类
     last_loss: Optional[torch.Tensor] # 记录最后一次计算的损失
